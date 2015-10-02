@@ -1,0 +1,225 @@
+Github的基本功能：
+
+Repository：你和我一起做“知乎首页”，“知乎首页”就是Repository，即项目或者”未来武器T2级425mm磁轨炮“之类，怎么叫随你，你只需知道Repository是个放项目的地方就行。有时候会出现Repositories，是多个Repository的意思。
+Fork：我们把制作“知乎首页“的工作分开，你负责美工，我负责前端开发，但我们还需要数据服务器高手。你找来了一位php大牛，这位大牛很快搞定了服务器端，闲来无事，就看了看我的前端代码，一看，“我靠，这怎么一点也不语义化呢？全是尼玛的清一色的<div>啊，将来做交互js还搞不搞dom了……”于是这大牛在Repository中找到了我写的“zhi.html”，Fork了一份，也就是授权拷贝。
+Branch：Fork之后，在大牛的Github上出现了一个同样叫做“知乎首页”的Repository，但是这个Repository是复制品，只归他，这就是他的Branch，也就是分支。
+Pull Request：大牛做完了一份全新的高端zhi.html，点了Pull Request，也就是推送请求。我接受了，看了一眼，顿时惊讶爆表，“中国足球——高，实在是高！”
+现在你懂了，Github的结构是Repository-Branch-(获取/推送)文件。你又发现Github可以比较两个文件的异同，新增的部分用绿色标记，删除的部分用红色标记。Pull Request还可以控制，甚至可以合并Branch，这就是团队合作利器啊，真乃高大上也，手痒了吧？心动了吧？
+
+请注册Github并登录。
+下载客户端并登录，客户端负责你硬盘上的数据与Github服务器数据的交互，然后设置存储目录。为了表现你的才华，你决定将此目录命名为“诸神之爹”。
+既然有这么多的国外开源项目，我们国内哪有不自主的道理。必须要实践一下这个顶好赞的Fork功能。现在你来到了Fadeoc/frontend · GitHub，你看到了这是用户Fadeoc的一个叫做“frontend”的Repository，你笑了，这家伙学习前端知识不过十天，代码一片渣，竟然有的代码里只写了“土豆”和“二狗子”几个汉字。你点了一下右上角的Fork，然后clone in desktop，保存到“诸神之爹”，哇！文件已经在你电脑里了，完全免费耶！+10086！
+一个小时后，你对Fadeoc的渣代码颇有心得，决定帮他改良，不然他这项目就完了。你改好之后，Pull Request，这丫的竟然说你的代码太渣，不吸收。贱人！老子自己做，抢你市场份额！
+你点了右上角自己头像后面的+号，选择了第一个New repository，即新建repository，并且起了个名字，叫做“完爆Fadeoc”，然后点击绿色按钮set up in desktop，弹出保存框，选择“诸神之爹”。于是“诸神之爹”下出现了一个“完爆Fadeoc”的文件夹。
+你自己写了一份“神爹首页.html”，把它放在了“完爆Fadeoc”文件夹下。
+你打开了客户端，看到客户端界面中master Branch（主人分支，这名字太云端了）出现了一个Uncommitted changes，即未提交的变动，也就是你刚写的“神爹首页.html”。你点开show按钮，在summary（摘要）的部分添上“滚你丫的Fadeoc”，在Description（细节描述）的位置是没必要写的，但你还是决定添上“爆你菊花”四个大字。然后选择“Commit to 你的用户名”。
+为了把这个提交上传到Github上让贱人Fadeoc看到，你点击了客户端右上角的后面显示了一个“+1”的Sync，即同步，过了几秒，Sync前的两个曲线箭头停止了转动，同步成功了，“+1”消失，表示一个文件成功上传。
+你来到Github，刷新自己的个人页，“完爆Fadeoc”这个Repository出现在页面上，点开它，在里面你看到了”神爹首页.html”。
+为了让这个项目的初始目的更加浅显易懂，你决定添加一个Readme.txt，虽然从前下载的N多软件的文件夹里总是有一个Readme.txt，你一个都没打开过。但在圈里混，就得混的人模狗样的，于是你在“完爆Fadeoc”下新建了一个Readme.txt，里面写上，“Fadeoc，没错，说的就是你，看我口型，你个贱人！”
+同样使用客户端commit，然后sync，过了几秒，刷新github，你看到又多出了一个readme.txt。而且在下面又多出一个文字显示框，里面显示的就是readme.txt里面的内容“Fadeoc，没错，说的就是你，看我口型，你个贱人！”，避免了Fadeoc这个贱人不想打开readme.txt也就看不到你亲切问候的尴尬局面。Github真是贴心呐。
+你复制了这个Repository的地址，Email给了Fadeoc。
+Fadeoc不是那么容易被打败的，于是他Fork了你的Repository，修改了readme.txt，然后pull request，你看到fadeoc新生成的branch下的readme.txt被改成了“你才是贱人”。你拒绝了合并请求。
+Fadeoc再次pull request，readme.txt改成了“敢不做恶吗？”
+你有点烦了，这他妈的怎么才能不让他pull request，将来大项目N多陌生人菜鸟pull request烦不烦，就不能不开源，转私有吗？你终于找到了Github的升级服务，你笑了，将这个Repository从Public转成了Private。Fadeoc肯定会继续pull request，得不到你回应的他只会渐渐被复仇的怒火烧尽理智，可是，谁在乎呢？
+Github还有更多细节功能，在使用过程中，你会慢慢发现，慢慢学会。但是不管如何，现在你会使用Github的基本功能了。
+
+==========================================================================
+Git查看远程分支:	$ git branch -a
+Git删除远程分支：	$ git push origin --delete <branchName>
+Git查看远程分支状态：	$ git remote show origin
+
+
+**************************************************************************
+Git查看、删除、重命名远程分支和tag
+发表于 11/17/2012 作者 zrong — 6 条评论 ↓	133,613 次查看
+本站文章除注明转载外，均为本站原创或者翻译。
+本站文章欢迎各种形式的转载，但请18岁以上的转载者注明文章出处，尊重我的劳动，也尊重你的智商；
+本站部分原创和翻译文章提供markdown格式源码，欢迎使用文章源码进行转载；
+本文标题：Git查看、删除、重命名远程分支和tag
+本文链接：http://zengrong.net/post/1746.htm
+Git查看、删除、重命名远程分支和tag
+
+2015-06-15：加入姊妹篇；
+2013-11-06：加入重命名远程分支的内容；
+2013-01-09：加入删除远程tag的内容。
+姊妹篇：使用Git、Git GUI和TortoiseGit
+
+这篇文章记录我在使用git的过程中碰到远程分支和tag的相关内容，提纲：
+
+查看远程分支
+删除远程分支和tag
+删除不存在对应远程分支的本地分支
+重命名远程分支
+把本地tag推送到远程
+获取远程tag
+查看远程分支
+
+加上-a参数可以查看远程分支，远程分支会用红色表示出来（如果你开了颜色支持的话）：
+
+$ git branch -a
+  master
+  remote
+  tungway
+  v1.52
+* zrong
+  remotes/origin/master
+  remotes/origin/tungway
+  remotes/origin/v1.52
+  remotes/origin/zrong
+删除远程分支和tag
+
+在Git v1.7.0 之后，可以使用这种语法删除远程分支：
+
+$ git push origin --delete <branchName>
+删除tag这么用：
+
+git push origin --delete tag <tagname>
+
+否则，可以使用这种语法，推送一个空分支到远程分支，其实就相当于删除远程分支：
+
+git push origin :<branchName>
+这是删除tag的方法，推送一个空tag到远程tag：
+
+git tag -d <tagname>
+git push origin :refs/tags/<tagname>
+两种语法作用完全相同。
+
+删除不存在对应远程分支的本地分支
+
+假设这样一种情况：
+
+我创建了本地分支b1并pull到远程分支 origin/b1；
+其他人在本地使用fetch或pull创建了本地的b1分支；
+我删除了 origin/b1 远程分支；
+其他人再次执行fetch或者pull并不会删除这个他们本地的 b1 分支，运行 git branch -a 也不能看出这个branch被删除了，如何处理？
+使用下面的代码查看b1的状态：
+
+$ git remote show origin
+* remote origin
+  Fetch URL: git@github.com:xxx/xxx.git
+  Push  URL: git@github.com:xxx/xxx.git
+  HEAD branch: master
+  Remote branches:
+    master                 tracked
+    refs/remotes/origin/b1 stale (use 'git remote prune' to remove)
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+这时候能够看到b1是stale的，使用 git remote prune origin 可以将其从本地版本库中去除。
+
+更简单的方法是使用这个命令，它在fetch之后删除掉没有与远程分支对应的本地分支：
+
+git fetch -p
+重命名远程分支
+
+在git中重命名远程分支，其实就是先删除远程分支，然后重命名本地分支，再重新提交一个远程分支。
+
+例如下面的例子中，我需要把 devel 分支重命名为 develop 分支：
+
+$ git branch -av
+* devel                             752bb84 Merge pull request #158 from Gwill/devel
+  master                            53b27b8 Merge pull request #138 from tdlrobin/master
+  zrong                             2ae98d8 modify CCFileUtils, export getFileData
+  remotes/origin/HEAD               -> origin/master
+  remotes/origin/add_build_script   d4a8c4f Merge branch 'master' into add_build_script
+  remotes/origin/devel              752bb84 Merge pull request #158 from Gwill/devel
+  remotes/origin/devel_qt51         62208f1 update .gitignore
+  remotes/origin/master             53b27b8 Merge pull request #138 from tdlrobin/master
+  remotes/origin/zrong              2ae98d8 modify CCFileUtils, export getFileData
+删除远程分支：
+
+$ git push --delete origin devel
+To git@github.com:zrong/quick-cocos2d-x.git
+ - [deleted]         devel
+重命名本地分支：
+
+git branch -m devel develop
+推送本地分支：
+
+$ git push origin develop
+Counting objects: 92, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (48/48), done.
+Writing objects: 100% (58/58), 1.38 MiB, done.
+Total 58 (delta 34), reused 12 (delta 5)
+To git@github.com:zrong/quick-cocos2d-x.git
+ * [new branch]      develop -> develop
+然而，在 github 上操作的时候，我在删除远程分支时碰到这个错误：
+
+$ git push --delete origin devel
+remote: error: refusing to delete the current branch: refs/heads/devel
+To git@github.com:zrong/quick-cocos2d-x.git
+ ! [remote rejected] devel (deletion of the current branch prohibited)
+error: failed to push some refs to 'git@github.com:zrong/quick-cocos2d-x.git'
+这是由于在 github 中，devel 是项目的默认分支。要解决此问题，这样操作：
+
+进入 github 中该项目的 Settings 页面；
+设置 Default Branch 为其他的分支（例如 master）；
+重新执行删除远程分支命令。
+把本地tag推送到远程
+
+git push --tags
+获取远程tag
+
+git fetch origin tag <tagname>
+参考文章
+
+https://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote
+http://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-in-github
+http://www.cnblogs.com/deepnighttwo/archive/2011/06/18/2084438.html
+http://stackoverflow.com/questions/14040754/deleting-remote-master-branch-refused-due-to-being-current-branch
+http://weli.iteye.com/blog/1441582
+关联文章
+修改了SSH默认端口之后，如何配置git？
+安装gitolite
+在CentOS上编译安装Ruby 1.9
+读写FREByteArray
+对RTMP视频流进行BitmapData.draw()出错的解决办法
+‹ [转]至今听到关于 Lisp 最迷人的故事Flash Builder 4.7 正式版下载地址 ›
+文章分类 技术	标签： git
+评论(8人参与，8条评论)
+
+发布
+最新评论
+
+2015年5月26日 13:41繁华似锦 [北京市网友]
+给力
+ 回复分享
+
+2014年12月9日 15:55Git查看、删除远程分支 | 南淮月
+[…] Git查看、删除远程分支 […]
+ 回复分享
+
+2014年9月22日 8:44zrong
+1Sigma
+它在fetch之后删除掉没有与远程分支对应的本地分支： 
+git fetch -p 
+==== 
+没有表明如何“删除本地分支”哦。
+这句话描述很清楚啊。
+ 回复分享
+
+2014年9月20日 14:51Sigma
+它在fetch之后删除掉没有与远程分支对应的本地分支： 
+git fetch -p 
+==== 
+没有表明如何“删除本地分支”哦。
+ 回复分享
+
+2014年7月31日 9:38zrong
+1suzhou
+你的代码高亮的插件是啥？挺好看的
+<a href=http://code-snippets.bungeshea.com/ target=_blank rel=nofollow>Code Snippets</a>
+ 回复分享
+
+2014年7月29日 16:53suzhou
+你的代码高亮的插件是啥？挺好看的
+ 回复分享
+
+2014年5月17日 10:27jnuc093
+写的不错
+ 回复分享
+
+2014年4月21日 21:39git操作远程分支和tag | OpenWar
+[…] References: [1]GIT查看、删除、重命名远程分支和TAG […]
